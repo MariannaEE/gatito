@@ -1,0 +1,27 @@
+import turtle
+
+# Crea la ventana y establece su tamaño
+ventana = turtle.Screen()
+ventana.setup(width=500, height=500)
+
+# Crea la tortuga para el gatito y establece su posición inicial
+gatito = turtle.Turtle()
+gatito.penup()
+gatito.goto(0, -200)
+
+# Define una función para hacer que el gatito baile
+def bailar():
+    gatito.left(15)
+    gatito.forward(50)
+    gatito.right(30)
+    gatito.forward(50)
+    gatito.left(15)
+
+# Define una función para hacer que el gatito diga "I'm sorry"
+def decir_lo_siento():
+    gatito.write("I'm sorry", align="center", font=("Arial", 24, "normal"))
+
+# Hace que el gatito baile y diga "I'm sorry" en un bucle infinito
+while True:
+    bailar()
+    decir_lo_siento()
